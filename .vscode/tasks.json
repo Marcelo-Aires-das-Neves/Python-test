@@ -3,7 +3,17 @@
     "tasks": [
         {
             "label": "echo",
-            "type": "npm",
+            "type": "shell",
+            "command": "echo Hello"
+        }
+    ]
+}
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "echo",
+            "type": "shell",
             "command": "echo Hello"
         }
     ]
