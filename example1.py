@@ -1,5 +1,4 @@
-print("Second example, return the first example from GitHub Copilot.")
+print("Teste Marcelo.")
 a = []
 for i in range(10):
     print(i)
-+
