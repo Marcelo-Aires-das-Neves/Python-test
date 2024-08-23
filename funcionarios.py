@@ -1,7 +1,7 @@
 users = {}
 counter = 0
 while True:
-    nome = input('Insert the name: ')
+    nome = input('Insert the name please: ')
     if nome != 'fim':
         counter += 1
         users[counter] = [nome, int(input('Idade: '))]
