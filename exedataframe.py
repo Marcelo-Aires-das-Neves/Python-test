@@ -7,3 +7,7 @@ alunos = {'Nome': ['Ricardo', 'Pedro', 'Roberto', 'Carlos'],
 
 df = pd.DataFrame(alunos, columns=['Nome', 'Nota', 'Aprovado'])
 print(df)
+df2 = df.head()
+print(df2)
+df3 = df.describe()
+print(df3)
