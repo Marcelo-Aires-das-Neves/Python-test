@@ -2,10 +2,7 @@ import pandas as pd
 
 df = pd.read_csv('C:/Users/USER/Downloads/archive/athlete_events.csv')
 a = df.head(6)
-"""
-df['Sex'].loc[df['Sex'] == 'M'] = 'M'
-df['Sex'].loc[df['Sex'] == 'F'] = 'F'
-"""
+
 total = len(df)
 m = (len(df['Sex'].loc[df['Sex'] == 'M'])) / total
 f =(len(df['Sex'].loc[df['Sex'] == 'F'])) / total
