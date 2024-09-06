@@ -24,12 +24,11 @@ while True:
 
     # Salvar a imagem
     cv2.imwrite('imagem_capturada.jpg', frame)
+    cont
 
 # Liberar a câmera e fechar a janela    
     cv2.waitKey(0)
     cv2.destroyAllWindows()
-    
-    
-cont = cont + 1
-if cont == 5:
-    break
+    cap.release()    
+    if cont == 5:
+        break
