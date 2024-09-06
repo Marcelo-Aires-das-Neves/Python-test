@@ -1,7 +1,7 @@
 
 import cv2
 
-
+cont = 0
 while True:
     # Inicializar a câmera (0 geralmente representa a câmera padrão)
     cap = cv2.VideoCapture(0)
@@ -25,6 +25,11 @@ while True:
     # Salvar a imagem
     cv2.imwrite('imagem_capturada.jpg', frame)
 
-# Liberar a câmera e fechar a janela
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+# Liberar a câmera e fechar a janela    
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+    
+    
+cont = cont + 1
+if cont == 5:
+    break
