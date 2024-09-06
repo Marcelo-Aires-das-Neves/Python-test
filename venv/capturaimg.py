@@ -24,7 +24,7 @@ while True:
 
     # Salvar a imagem
     cv2.imwrite('imagem_capturada.jpg', frame)
-    cont
+    cont = cont + 1
 
 # Liberar a câmera e fechar a janela    
     cv2.waitKey(0)
