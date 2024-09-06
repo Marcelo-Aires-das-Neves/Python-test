@@ -1,27 +1,29 @@
 
 import cv2
 
-# Inicializar a câmera (0 geralmente representa a câmera padrão)
-cap = cv2.VideoCapture(0)
 
-# Verificar se a câmera foi aberta corretamente
-if not cap.isOpened():
-    print("Não foi possível abrir a câmera")
-    exit()
+while True:
+    # Inicializar a câmera (0 geralmente representa a câmera padrão)
+    cap = cv2.VideoCapture(0)
 
-# Capturar um frame
-ret, frame = cap.read()
+    # Verificar se a câmera foi aberta corretamente
+    if not cap.isOpened():
+        print("Não foi possível abrir a câmera")
+        exit()
 
-# Verificar se o frame foi capturado com sucesso
-if not ret:
-    print("Não foi possível capturar o frame")
-    exit()
+    # Capturar um frame
+    ret, frame = cap.read()
 
-# Mostrar o frame
-cv2.imshow('Frame', frame)
+    # Verificar se o frame foi capturado com sucesso
+    if not ret:
+        print("Não foi possível capturar o frame")
+        exit()
 
-# Salvar a imagem
-cv2.imwrite('imagem_capturada.jpg', frame)
+    # Mostrar o frame
+    cv2.imshow('Frame', frame)
+
+    # Salvar a imagem
+    cv2.imwrite('imagem_capturada.jpg', frame)
 
 # Liberar a câmera e fechar a janela
 cv2.waitKey(0)
