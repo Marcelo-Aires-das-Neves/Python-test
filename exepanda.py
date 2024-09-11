@@ -1,6 +1,5 @@
 import pandas as pd
 
-dados = pd.read_excel('C:/Users/USER/Documents/dditatech/arquivo1.xlsx')
-a = dados.head(6)
-b = dados.columns.tolist()     # mostra as colunas 
-print(b)
+dados = pd.read_csv('C:/Users/USER/Downloads/archive/athlete_events.csv')
+a = dados.head()
+print(a)
