@@ -1,12 +1,6 @@
 class Cachorro:
-    def __init__(self, nome: str, raca: str, cor: str) -> None:
-        """
-        Initialize a new instance of Cachorro class.
-
-        :param nome: The name of the dog.
-        :param raca: The breed of the dog.
-        :param cor: The color of the dog.
-        """
+    def __init__(self, nome: str, raca: str, cor: str):
+        
         self.nome = nome
         self.raca = raca
         self.cor = cor
