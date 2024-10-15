@@ -1,15 +1,13 @@
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
+def fibonacci(n):
+    a, b = 0, 1
+    sequence = []
+    for _ in range(n):
+        sequence.append(a)
+        a, b = b, a + b
+    return sequence
 
-# Carregar os dados
-dados = pd.read_csv('C:/Users/USER/Downloads/archive/athlete_events.csv')
-dados.head()
-dados.shape
-enulo = dados.isnull()
-enulo.head()
-faltantes = dados.isnull().sum()
-faltantes.head()
-print(faltantes)
-faltantes_percentual = (dados.isnull().sum() / len(dados['ID'])) * 100
-print(faltantes_percentual)
+# Solicitar o número de termos ao usuário
+numeros = int(input("Quantos termos deseja mostrar? "))
+
+# Gerar e imprimir a sequência de Fibonacci
+print(fibonacci(numeros))
