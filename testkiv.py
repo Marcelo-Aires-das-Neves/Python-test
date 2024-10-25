@@ -1,10 +1,15 @@
 from kivy.app import App
-from kivy.uix.label import Label
-from kivy.uix.button import Button
+from kivy.uix.boxlayout import BoxLayout
 
-class Ola(Label):
-    pass
-    
+class Ola(BoxLayout):
+    def __init__(self):
+        super().__init__()
+        #self.orientation = 'horizontal'
+        #self.add_widget('ola')
+        #self.ids.textOla.text = 'ola'
+        self.ids['textPython'].text = 'Hello Python while Kivy'
+        print(self.ids)
+        
 class Testkiv(App):
     def build(self):
         return  Ola()
