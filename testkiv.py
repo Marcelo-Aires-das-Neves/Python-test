@@ -1,8 +1,11 @@
 from kivy.app import App
-from kivy.lang import Builder
+from kivy.uix.label import Label
 
-class TestApp(App):
+class Ola(Label):
+    pass
+    
+class Testkiv(App):
     def build(self):
-        return  Builder.load_file('testkiv.kv')
+        return  Ola()
 
-TestApp().run()
+Testkiv().run()
