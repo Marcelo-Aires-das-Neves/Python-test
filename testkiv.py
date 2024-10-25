@@ -7,9 +7,10 @@ class Ola(BoxLayout):
         #self.orientation = 'horizontal'
         #self.add_widget('ola')
         #self.ids.textOla.text = 'ola'
-        self.ids['textPython'].text = 'Hello Python while Kivy'
-        print(self.ids)
-        
+        #self.ids['textPython'].text = 'Hello Python while Kivy'
+        #print(self.ids)
+        pass
+    
 class Testkiv(App):
     def build(self):
         return  Ola()

@@ -2,12 +2,27 @@
 
 <Ola>:
     orientation:'vertical'
-    Label:
-        id:textOla
-        text:'Language Kivy'
+    padding:100
+    spacing:50
+
+    Button:
+        id:btn_1
+        text:'Botão 1'
         font_size:60
-    Label:
-        id:textPython
-        text:'Python'
+        on_press: 
+            self.text_1=self.text
+            self.text='Clicou'
+        on_release:
+            self.text=root.ids.btn_2.text
+            root.ids.btn_2.text=self.text_1
+    Button:
+        id:btn_2
+        text:'Botão 2'
         font_size:60
+        on_press: 
+            self.text_2=self.text
+            self.text='Clicou'
+        on_release: 
+            self.text=root.ids.btn_1.text
+            root.ids.btn_1.text=self.text_2
     
