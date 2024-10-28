@@ -6,29 +6,35 @@
         orientation: 'vertical'
         padding: 15
         spacing: 15
-        Label:
-            size_hint_y: None
-            height: 50
-            text: 'Cadastro de Usuário'
-            color: 0, 0, 0, 1
-            
-        TextInput:
-            size_hint_y: None
-            height: 50
-        Label:
-            size_hint_y: None
-            height: 50
-            text: 'Insira o Saldo da carteira:'
-            color: 0, 0, 0, 1
-        TextInput:
-            size_hint_y: None
-            height: 50
-        Button:
-            text: 'Cadastrar'
-            on_press: root.cadastrar()
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 15
+            Label:
+                text_size: self.size
+                halign: 'left'
+                text: 'Cadastro de Usuário'
+                color: 0, 0, 0, 1
+                
+            TextInput:
+                size_hint_y: None
+                height: 50
+            Label:
+                text_size: self.size
+                halign: 'left'
+                text: 'Insira o Saldo da carteira:'
+                color: 0, 0, 0, 1
+            TextInput:
+                size_hint_y: None
+                height: 50
+            Button:
+                text: 'Cadastrar'
+                on_press: root.cadastrar()
         Label:
             text: ''
             color: 0, 0, 0, 1
+            text_size: self.size
+            halign: 'left'
+            size_hint_y: 1.3
 
     
     
