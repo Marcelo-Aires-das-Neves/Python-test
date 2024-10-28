@@ -1,18 +1,15 @@
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
+from kivy.core.window import Window
 
-class Ola(BoxLayout):
-    def __init__(self):
-        super().__init__()
-        #self.orientation = 'horizontal'
-        #self.add_widget('ola')
-        #self.ids.textOla.text = 'ola'
-        #self.ids['textPython'].text = 'Hello Python while Kivy'
-        #print(self.ids)
-        pass
+Window.size = (600, 500)
+Window.clearcolor = (233/255, 225/255, 216/255, 1)
+
+class Cadastro(BoxLayout):
+    pass
     
 class Testkiv(App):
     def build(self):
-        return  Ola()
+        return  Cadastro()
 
 Testkiv().run()

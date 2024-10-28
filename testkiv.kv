@@ -1,28 +1,34 @@
 #:kivy 2.1.0
 
-<Ola>:
-    orientation:'vertical'
-    padding:100
-    spacing:50
+<Cadastro>:
+    name: 'cadastro'
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 15
+        spacing: 15
+        Label:
+            size_hint_y: None
+            height: 50
+            text: 'Cadastro de Usuário'
+            color: 0, 0, 0, 1
+            
+        TextInput:
+            size_hint_y: None
+            height: 50
+        Label:
+            size_hint_y: None
+            height: 50
+            text: 'Insira o Saldo da carteira:'
+            color: 0, 0, 0, 1
+        TextInput:
+            size_hint_y: None
+            height: 50
+        Button:
+            text: 'Cadastrar'
+            on_press: root.cadastrar()
+        Label:
+            text: ''
+            color: 0, 0, 0, 1
 
-    Button:
-        id:btn_1
-        text:'Botão 1'
-        font_size:60
-        on_press: 
-            self.text_1=self.text
-            self.text='Clicou'
-        on_release:
-            self.text=root.ids.btn_2.text
-            root.ids.btn_2.text=self.text_1
-    Button:
-        id:btn_2
-        text:'Botão 2'
-        font_size:60
-        on_press: 
-            self.text_2=self.text
-            self.text='Clicou'
-        on_release: 
-            self.text=root.ids.btn_1.text
-            root.ids.btn_1.text=self.text_2
+    
     
