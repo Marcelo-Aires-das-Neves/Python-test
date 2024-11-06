@@ -1,7 +1,7 @@
-x = float(input("What's x? "))
-y = float(input("What's y? "))
+def greet_with(name, location):
+    print(f"hello {name}")
+    print(f"is it like in {location}")
 
-z = round(x + y)
 
-print(f"{z:.2f}")
-      
+
+greet_with("Marcelo", "Tremembe")
