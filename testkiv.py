@@ -6,7 +6,9 @@ Window.size = (600, 500)
 Window.clearcolor = (233/255, 225/255, 216/255, 1)
 
 class Cadastro(BoxLayout):
-    pass
+    def cadastrar(self):
+        nome = self.ids.nome.text
+        saldo = self.ids.saldo.text
     
 class Testkiv(App):
     def build(self):
