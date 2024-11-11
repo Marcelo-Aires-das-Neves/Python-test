@@ -14,8 +14,9 @@
                 halign: 'left'
                 text: 'Insira um nome para cadastro'
                 color: 0, 0, 0, 1
-                
             TextInput:
+                multiline: False
+                id: nome
                 size_hint_y: None
                 height: 50
             Label:
@@ -24,11 +25,14 @@
                 text: 'Insira o Saldo da carteira:'
                 color: 0, 0, 0, 1
             TextInput:
+                multiline: False
+                id: saldo
+                input_filter: 'float'
                 size_hint_y: None
                 height: 50
             Button:
                 text: 'Cadastrar'
-                font_size: 20
+                font_size: 22
                 on_press: root.cadastrar()
         Label:
             text: ''
