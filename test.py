@@ -1,28 +1,16 @@
-distances = {
-    "Voyager 1": 163,
-    "Voyager 2": 1,
-    "Voyager 3": 2, 
-    "Voyager 4": 3,
-    "Voyager 5": "4 kk"
-}
+import random
 
-def main():
-    spacecraft = input("Enter the spacecraft name: ")
-    try:
-        m = float(distances[spacecraft])
-    except KeyError:
-        print("Spacecraft not found")
-    except ValueError:
-        print("Invalid input")
-    else:
-        print(f"{spacecraft} is {convert_to_miles(m)} miles away")  
-    """    
-    finally:
-        print("Thanks for using this program")   """ 
-def convert_to_miles(km):   
-    return km * 149597870700
+# Gera 8 números ímpares
+impares = random.sample([x for x in range(1, 26, 2)], 8)
 
+# Gera 7 números pares
+pares = random.sample([x for x in range(2, 26, 2)], 7)
 
+# Combina as listas
+numeros = impares + pares
 
-if __name__ == "__main__":
-    main()  
+# Embaralha a lista
+random.shuffle(numeros)
+numeros.sort()
+print(numeros)
+

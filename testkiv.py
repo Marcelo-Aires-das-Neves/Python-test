@@ -12,13 +12,10 @@ class Cadastro(BoxLayout):
         nome = self.ids.nome.text
         saldo = self.ids.saldo.text
         if nome in usuarios:
-            self.ids.msg.text = "Usuário já cadastrado"
+            self.ids.msg.text = "Usuário já cadastrado" #self.ids.msg.text = "= "Usuário já cadastrado"
         else:
             usuarios[nome] = float(saldo)
-            self.ids.msg.text = "Usuário cadastrado com sucesso"
-            self.ids.nome.text = ""
-            self.ids.saldo.text = ""
-            print(usuarios)
+            self.ids.msg.text = "Usuário cadastrado com sucesso" #print(usuarios)
         
 class Testkiv(App):
     def build(self):

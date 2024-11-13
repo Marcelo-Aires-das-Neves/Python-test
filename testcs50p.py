@@ -1,19 +1,26 @@
-def calculate_love_score(name1, name2):
-    """Calculate the love score based on the names provided."""
-    combined_name = (name1 + name2).lower()
-    
-    first_digit = sum(combined_name.count(char) for char in "true")
-    second_digit = sum(combined_name.count(char) for char in "love")
-    
-    love_score = int(f"{first_digit}{second_digit}")
-    return love_score
+import random
 
-def main():
-    """Main function to run the love score calculation."""
-    name1 = "Marcelo"
-    name2 = "Maria Silvana"
-    love_score = calculate_love_score(name1, name2)
-    print(f"The love score for {name1} and {name2} is: {love_score}")
+# Função para verificar se um número é primo
+def eh_primo(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
 
-if __name__ == "__main__":
-    main()
+# Gera 5 números primos
+primos = [x for x in range(1, 26) if eh_primo(x)]
+numeros_primos = random.sample(primos, 4)
+
+# Gera 10 números restantes
+numeros_restantes = random.sample([x for x in range(1, 26) if x not in numeros_primos], 10)
+
+# Combina as listas
+numeros = numeros_primos + numeros_restantes
+
+# Embaralha a lista
+random.shuffle(numeros)
+numeros.sort()
+print(numeros)
+
