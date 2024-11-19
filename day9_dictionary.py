@@ -23,4 +23,4 @@ for student, score in student_scores.items():
 
 # Print the final grades
 for student, grades in student_grades.items():
-    print(f"{student}: {grades}")
+    print(f"{student} {student_scores[student]}: {grades}")
