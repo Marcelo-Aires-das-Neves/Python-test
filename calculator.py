@@ -1,9 +1,9 @@
 def main():
     x = int(input("What's x? "))
-    print("x squared is", squared())
+    print("x squared is", squared(x))
     
-def squared():
-    return n * n
+def squared(x):
+    return x * x
 
 
 
