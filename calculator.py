@@ -3,7 +3,8 @@ def main():
     print("x squared is", squared())
     
 def squared():
-    return n + n
+    return n * n
+
 
 
 if __name__ == "__main__":
