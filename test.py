@@ -1,8 +1,8 @@
 import random
 
 # Números já utilizados, separados por paridade
-pares_usados = [12, 18, 20, 24]
-impares_usados = [1, 3, 9, 11, 13]
+pares_usados = [8, 10, 12, 14, 16, 18]
+impares_usados = [7, 9, 11, 13, 15, 17, 19]
 
 # Listas para armazenar os números finais
 todos_numeros = []
@@ -31,5 +31,5 @@ while len(impares_restantes) < 8:
 # Combinar as listas de pares e ímpares
 todos_numeros.extend(pares_restantes)
 todos_numeros.extend(impares_restantes)
-
+todos_numeros.sort()
 print(todos_numeros)
