@@ -1,5 +1,11 @@
+students = []
+
 with open("exemplo5.csv") as file:
     for line in file:
-        row = line.strip().split(",")
-        print(f"{row[0]}: {row[1]}")
+        name, sexo = line.strip().split(",")
+        student = {"name": name, "sexo": sexo}
+        students.append(student)
+            
+    for student in sorted(students, key=lambda student: student["sexo"]):
+        print(f'{student["name"]}: {student["sexo"]}')
         
